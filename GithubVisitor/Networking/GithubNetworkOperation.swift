@@ -73,6 +73,7 @@ extension GithubNetworkOperation {
                     let error = NSError(domain: ErrorDomain,
                                         code: OPERATION_INVALID_STATUS_CODE,
                                         userInfo: [
+                                            "statusCode" : response.response?.statusCode ?? 0,
                                             "message" : "Invalid status code"
                                         ])
                     completionHandler(error, nil)
@@ -83,6 +84,7 @@ extension GithubNetworkOperation {
                     let error = NSError(domain: ErrorDomain,
                                         code: OPERATION_FAIL_INVALID_FEEDBACK,
                                         userInfo: [
+                                            "statusCode" : response.response?.statusCode ?? 0,
                                             "message" : "Invalid feedback"
                                         ])
                     completionHandler(error, nil)
