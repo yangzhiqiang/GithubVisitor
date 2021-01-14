@@ -29,5 +29,42 @@ class GithubVisitorTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+}
 
+class GitbubNetworkTests: XCTestCase {
+    func testLoad() throws {
+        let expectNormal = expectation(description: "Request should OK")
+        GithubNetworkOperation.shared.load(path: "/") { (error, dict) in
+            XCTAssertTrue(error == nil)
+            XCTAssertTrue(dict != nil)
+            
+            expectNormal.fulfill()
+        }
+        
+        let expectNotexist = expectation(description: "Request should fail")
+        GithubNetworkOperation.shared.load(path: "/notexist") { (error, dict) in
+            XCTAssertTrue(error != nil)
+            XCTAssertTrue(dict == nil)
+            
+            expectNotexist.fulfill()
+        }
+
+        self.wait(for: [expectNormal, expectNotexist, ], timeout: 10)
+    }
+    
+    func testEndpoit() throws {
+        let expectNormal = expectation(description: "Request should OK")
+        
+        GithubNetworkOperation.shared.visitEndpoint() { (error, dict) in
+            XCTAssertTrue(error == nil)
+            XCTAssertTrue(dict != nil)
+            
+            XCTAssertTrue(dict?["current_user_url"] != nil)
+            XCTAssertTrue(dict?["current_user_url"] as? String != nil)
+
+            expectNormal.fulfill()
+        }
+        
+        wait(for: [expectNormal], timeout: 10)
+    }
 }
