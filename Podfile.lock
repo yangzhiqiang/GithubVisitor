@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.9.1)
+  - HandyJSON (5.0.2)
+  - PullToRefreshKit (0.8.8)
+  - SnapKit (5.0.1)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+
+DEPENDENCIES:
+  - Alamofire (= 4.9.1)
+  - HandyJSON
+  - PullToRefreshKit
+  - SnapKit
+  - SQLite.swift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - HandyJSON
+    - PullToRefreshKit
+    - SnapKit
+    - SQLite.swift
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  PullToRefreshKit: 7cc53e720e69f135cffa1a57784dfb534f0222ab
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+
+PODFILE CHECKSUM: 049ad89731e945d9e26ed01b7da898d066a3b353
+
+COCOAPODS: 1.10.0
