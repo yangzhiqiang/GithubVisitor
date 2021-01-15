@@ -102,14 +102,24 @@ class ViewController: UIViewController {
 // MARK: UI Method
 extension ViewController {
     func setupUI() -> Void {
-        // History Button
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "History",
-                                                           style: .plain,
-                                                           target: self,
-                                                           action: #selector(showHistory(_ :)));
+        
+        if workMode == .realTime {
+            // History Button
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "History",
+                                                               style: .plain,
+                                                               target: self,
+                                                               action: #selector(showHistory(_ :)));
 
-        navigationItem.title = "Github Root Info";
-
+            navigationItem.title = "Github Root Info";
+            
+            tableView.refreshControl = UIRefreshControl();
+            tableView.refreshControl?.addTarget(self, action:
+                                                        #selector(handleRefreshControl),
+                                                        for: .valueChanged)
+        } else {
+            navigationItem.title = "History Root Info";
+        }
+        
         tableView.register(GithubInfoDetailCell.self, forCellReuseIdentifier: "\(GithubInfoDetailCell.self)")
         
         tableView.rowHeight = UITableView.automaticDimension;
@@ -119,14 +129,13 @@ extension ViewController {
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0,
                                                          width: UIScreen.currentWidth(),
                                                          height: 1));
-        
-        tableView.refreshControl = UIRefreshControl();
-        tableView.refreshControl?.addTarget(self, action:
-                                                    #selector(handleRefreshControl),
-                                                    for: .valueChanged)
     }
     
     @objc func showHistory(_ sender : Any) {
+        if let storyboard = self.storyboard {
+           let controller = storyboard.instantiateViewController(identifier: "\(HistoryListController.self)")
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
 
     @objc func handleRefreshControl() {

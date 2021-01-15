@@ -12,12 +12,12 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GithubVisitor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="GithubVisitor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd3-hz-4XZ">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd3-hz-4XZ">
                                 <rect key="frame" x="186" y="464.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -67,6 +67,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkR-qn-4IN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-152.17391304347828" y="73.660714285714278"/>
+        </scene>
+        <!--History List Controller-->
+        <scene sceneID="qQa-3o-c7f">
+            <objects>
+                <viewController storyboardIdentifier="HistoryListController" id="PlU-n8-W46" customClass="HistoryListController" customModule="GithubVisitor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3lx-lF-xCY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cm-v4-sQD">
+                                <rect key="frame" x="186" y="442.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ghX-Jp-Dht">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dGR-kf-C4j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ghX-Jp-Dht" firstAttribute="centerX" secondItem="dGR-kf-C4j" secondAttribute="centerX" id="5Rm-9w-Tnh"/>
+                            <constraint firstItem="ghX-Jp-Dht" firstAttribute="top" secondItem="dGR-kf-C4j" secondAttribute="top" id="C8K-aR-fPF"/>
+                            <constraint firstItem="5Cm-v4-sQD" firstAttribute="centerX" secondItem="dGR-kf-C4j" secondAttribute="centerX" id="gW1-RB-n6z"/>
+                            <constraint firstItem="dGR-kf-C4j" firstAttribute="bottom" secondItem="ghX-Jp-Dht" secondAttribute="bottom" id="ori-Cy-1mo"/>
+                            <constraint firstItem="5Cm-v4-sQD" firstAttribute="centerY" secondItem="dGR-kf-C4j" secondAttribute="centerY" id="uWU-98-Uom"/>
+                            <constraint firstItem="ghX-Jp-Dht" firstAttribute="width" secondItem="3lx-lF-xCY" secondAttribute="width" id="yC3-pP-PBX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EsX-5x-DW1"/>
+                    <connections>
+                        <outlet property="tableView" destination="ghX-Jp-Dht" id="9G1-hs-Vs2"/>
+                        <outlet property="tipLabel" destination="5Cm-v4-sQD" id="1Bh-37-e5u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtu-K2-pI4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1658" y="74"/>
         </scene>
     </scenes>
     <resources>

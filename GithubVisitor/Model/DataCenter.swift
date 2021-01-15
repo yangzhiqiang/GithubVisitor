@@ -212,12 +212,29 @@ extension DataCenter {
         return nil
     }
     
-    func records(limit: Int = 20, offset: Int = 0) -> [CacheRecord] {
+    /// return latest record
+    ///
+    /// - parameter limit:     page size
+    /// - parameter offset:    start point of returned first record
+    /// - parameter topID:     base ID, prevent from returning repeat records.
+    ///
+    ///    **For example**
+    ///    limit = 4, offset = 0
+    ///    first got records ids
+    ///     20, 19, 18,17
+    ///    before you get next page, there insert new records, ids is 22, 21.
+    ///    if you don't specify the topID, you will records that's ids:
+    ///      18, 17, 16, 15
+    ///    Among them, 18, 17 is repeated. if you specify the topID == 20, you will get records.
+    ///      16,15,14,13
+    ///
+    /// - returns: return records
+    func records(limit: Int = 20, offset: Int = 0, topID: Int64 = Int64.max) -> [CacheRecord] {
         guard let db = self.db else {
             return []
         }
         
-        let page = cacheTable.limit(limit, offset: offset).order(id.desc)
+        let page = cacheTable.limit(limit, offset: offset).order(id.desc).filter(id <= topID)
         
         do {
             var array: [CacheRecord] = []
