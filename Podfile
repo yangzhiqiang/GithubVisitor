@@ -11,7 +11,7 @@ target 'GithubVisitor' do
   pod 'SnapKit' # Autolayout Library
   pod 'SQLite.swift' # SQLite3 library
   pod 'PullToRefreshKit' # Pull to refresh
-  pod 'HandyJSON' # JSON parse library
+  # pod 'HandyJSON' # JSON parse library
 
   target 'GithubVisitorTests' do
     inherit! :search_paths

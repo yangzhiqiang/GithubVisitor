@@ -19,7 +19,6 @@
 		6326C28D25B01F5A00DE62AC /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C28C25B01F5A00DE62AC /* Environment.swift */; };
 		6326C29225B0236D00DE62AC /* GithubNetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C29125B0236D00DE62AC /* GithubNetworkOperation.swift */; };
 		6326C29F25B02EF000DE62AC /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C29E25B02EF000DE62AC /* Error.swift */; };
-		6326C2A425B0447000DE62AC /* GithubRootInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2A325B0447000DE62AC /* GithubRootInfo.swift */; };
 		6326C2A925B069B200DE62AC /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2A825B069B200DE62AC /* DataCenter.swift */; };
 		6326C2AE25B08B9600DE62AC /* DataCenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2AD25B08B9600DE62AC /* DataCenterTest.swift */; };
 		6326C2B425B0A43400DE62AC /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2B325B0A43400DE62AC /* NotificationKey.swift */; };
@@ -70,7 +69,6 @@
 		6326C28C25B01F5A00DE62AC /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		6326C29125B0236D00DE62AC /* GithubNetworkOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubNetworkOperation.swift; sourceTree = "<group>"; };
 		6326C29E25B02EF000DE62AC /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		6326C2A325B0447000DE62AC /* GithubRootInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRootInfo.swift; sourceTree = "<group>"; };
 		6326C2A825B069B200DE62AC /* DataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		6326C2AD25B08B9600DE62AC /* DataCenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenterTest.swift; sourceTree = "<group>"; };
 		6326C2B325B0A43400DE62AC /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 		6326C28825B01CFC00DE62AC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6326C2A325B0447000DE62AC /* GithubRootInfo.swift */,
 				6326C2A825B069B200DE62AC /* DataCenter.swift */,
 				6326C2BB25B12B6E00DE62AC /* SimpleRootInfo.swift */,
 			);
@@ -489,7 +486,6 @@
 				6302773725B00D860052A339 /* ViewController.swift in Sources */,
 				6326C2B425B0A43400DE62AC /* NotificationKey.swift in Sources */,
 				6326C28D25B01F5A00DE62AC /* Environment.swift in Sources */,
-				6326C2A425B0447000DE62AC /* GithubRootInfo.swift in Sources */,
 				6302773325B00D860052A339 /* AppDelegate.swift in Sources */,
 				6326C2C125B1356900DE62AC /* GithubInfoDetailCell.swift in Sources */,
 				6326C2C625B136C100DE62AC /* ResourceManager.swift in Sources */,
