@@ -8,6 +8,7 @@
 import UIKit
 import SQLite
 
+/// DB record
 struct CacheRecord {
     var id: Int64
     var startTime: Int64
@@ -17,6 +18,7 @@ struct CacheRecord {
     var rawString: String
 }
 
+/// Management class for cached data
 class DataCenter: NSObject {
     // singleton object
     public static let shared: DataCenter = DataCenter()
@@ -48,16 +50,79 @@ class DataCenter: NSObject {
         super.init()
     }
 
+    /// Start fo fetching data from endpoint
     func startFetch() -> Void {
+        // prevent from starting repeatedly
         guard isRunning == false else {
             return
         }
         
+        isRunning = true
+        // initial database
+        initDB()
         
+        // start fetching data
+        fetch()
+    }
+    
+    /// fetch data from endpoint of Github and store this data into cache database,
+    /// then post notification `githubCacheChanged` to notify other observer
+    ///
+    /// This function fetches data every 5 seconds.
+    ///
+    func fetch() -> Void {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 5, execute: {
+            self.fetch()
+            
+            let startTime = Int64(Date().timeIntervalSince1970 * 1000)
+            GithubNetworkOperation.shared.visitEndpoint { [weak self] (error, dict) in
+                guard let self = self else {
+                    return
+                }
+                
+                defer {
+                    NotificationCenter.default.post(name: .githubCacheChanged, object: nil)
+                }
+                
+                let endTime = Int64(Date().timeIntervalSince1970 * 1000)
+                
+                guard error == nil else {
+                    
+                    let err = error! as NSError
+                    var statusCode = 0
+                    if let code = err.userInfo["statusCode"] as? Int {
+                        statusCode = code
+                    }
+                    var message = err.localizedDescription
+                    if let str = err.userInfo["message"] as? String {
+                        message = str
+                    }
+                    
+                    // insert failure record
+                    self.insertCache(record: CacheRecord(id: 0,
+                                                         startTime: startTime,
+                                                         endTime: endTime,
+                                                         errorCode: err.code,
+                                                         statusCode: statusCode,
+                                                         rawString: message))
+                    return
+                }
+                
+                if let data = try? JSONSerialization.data(withJSONObject: dict!, options: []), let raw = String(data: data, encoding: .utf8) {
+                    // insert cached record
+                    self.insertCache(record: CacheRecord(id: 0,
+                                                         startTime: startTime,
+                                                         endTime: endTime,
+                                                         errorCode: 0,
+                                                         statusCode: 0,
+                                                         rawString: raw))
+                }
+            }
+        })
     }
 }
 
-// MARk: DB Operation
+// MARK: DB Operation
 extension DataCenter {
 
     /// Initial the cache database

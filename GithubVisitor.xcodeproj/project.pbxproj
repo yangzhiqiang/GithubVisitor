@@ -22,6 +22,7 @@
 		6326C2A425B0447000DE62AC /* GithubRootInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2A325B0447000DE62AC /* GithubRootInfo.swift */; };
 		6326C2A925B069B200DE62AC /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2A825B069B200DE62AC /* DataCenter.swift */; };
 		6326C2AE25B08B9600DE62AC /* DataCenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2AD25B08B9600DE62AC /* DataCenterTest.swift */; };
+		6326C2B425B0A43400DE62AC /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2B325B0A43400DE62AC /* NotificationKey.swift */; };
 		9E221FB88003FFD0825873D0 /* Pods_GithubVisitor_GithubVisitorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D934EB967E6A14B8F0054502 /* Pods_GithubVisitor_GithubVisitorUITests.framework */; };
 		EE1905EBB127BDE4F7901868 /* Pods_GithubVisitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5411A46814CBF43D83F0F61 /* Pods_GithubVisitor.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		6326C2A325B0447000DE62AC /* GithubRootInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubRootInfo.swift; sourceTree = "<group>"; };
 		6326C2A825B069B200DE62AC /* DataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		6326C2AD25B08B9600DE62AC /* DataCenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenterTest.swift; sourceTree = "<group>"; };
+		6326C2B325B0A43400DE62AC /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
 		7E0ECA263AAEC333C2473503 /* Pods-GithubVisitorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVisitorTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubVisitorTests/Pods-GithubVisitorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A297893D12A1C5DEAD339BC8 /* Pods-GithubVisitor-GithubVisitorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVisitor-GithubVisitorUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubVisitor-GithubVisitorUITests/Pods-GithubVisitor-GithubVisitorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABCCE9CE5414170CA384DA30 /* Pods-GithubVisitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVisitor.debug.xcconfig"; path = "Target Support Files/Pods-GithubVisitor/Pods-GithubVisitor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		6302773125B00D860052A339 /* GithubVisitor */ = {
 			isa = PBXGroup;
 			children = (
+				6326C2B225B0A41B00DE62AC /* Util */,
 				6326C28B25B01D3300DE62AC /* Controller */,
 				6326C28925B01D0B00DE62AC /* Views */,
 				6326C28825B01CFC00DE62AC /* Model */,
@@ -206,6 +209,14 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		6326C2B225B0A41B00DE62AC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6326C2B325B0A43400DE62AC /* NotificationKey.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		814E9DD22EC5211B391BEA86 /* Frameworks */ = {
@@ -458,6 +469,7 @@
 			files = (
 				6326C29225B0236D00DE62AC /* GithubNetworkOperation.swift in Sources */,
 				6302773725B00D860052A339 /* ViewController.swift in Sources */,
+				6326C2B425B0A43400DE62AC /* NotificationKey.swift in Sources */,
 				6326C28D25B01F5A00DE62AC /* Environment.swift in Sources */,
 				6326C2A425B0447000DE62AC /* GithubRootInfo.swift in Sources */,
 				6302773325B00D860052A339 /* AppDelegate.swift in Sources */,
