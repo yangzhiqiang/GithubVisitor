@@ -24,6 +24,9 @@
 		6326C2AE25B08B9600DE62AC /* DataCenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2AD25B08B9600DE62AC /* DataCenterTest.swift */; };
 		6326C2B425B0A43400DE62AC /* NotificationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2B325B0A43400DE62AC /* NotificationKey.swift */; };
 		6326C2BC25B12B6E00DE62AC /* SimpleRootInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2BB25B12B6E00DE62AC /* SimpleRootInfo.swift */; };
+		6326C2C125B1356900DE62AC /* GithubInfoDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2C025B1356900DE62AC /* GithubInfoDetailCell.swift */; };
+		6326C2C625B136C100DE62AC /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2C525B136C100DE62AC /* ResourceManager.swift */; };
+		6326C2CB25B1374100DE62AC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6326C2CA25B1374100DE62AC /* Extension.swift */; };
 		9E221FB88003FFD0825873D0 /* Pods_GithubVisitor_GithubVisitorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D934EB967E6A14B8F0054502 /* Pods_GithubVisitor_GithubVisitorUITests.framework */; };
 		EE1905EBB127BDE4F7901868 /* Pods_GithubVisitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5411A46814CBF43D83F0F61 /* Pods_GithubVisitor.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +73,9 @@
 		6326C2AD25B08B9600DE62AC /* DataCenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCenterTest.swift; sourceTree = "<group>"; };
 		6326C2B325B0A43400DE62AC /* NotificationKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKey.swift; sourceTree = "<group>"; };
 		6326C2BB25B12B6E00DE62AC /* SimpleRootInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRootInfo.swift; sourceTree = "<group>"; };
+		6326C2C025B1356900DE62AC /* GithubInfoDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubInfoDetailCell.swift; sourceTree = "<group>"; };
+		6326C2C525B136C100DE62AC /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
+		6326C2CA25B1374100DE62AC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		7E0ECA263AAEC333C2473503 /* Pods-GithubVisitorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVisitorTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubVisitorTests/Pods-GithubVisitorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A297893D12A1C5DEAD339BC8 /* Pods-GithubVisitor-GithubVisitorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVisitor-GithubVisitorUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubVisitor-GithubVisitorUITests/Pods-GithubVisitor-GithubVisitorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABCCE9CE5414170CA384DA30 /* Pods-GithubVisitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVisitor.debug.xcconfig"; path = "Target Support Files/Pods-GithubVisitor/Pods-GithubVisitor.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 		6326C28925B01D0B00DE62AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6326C2C025B1356900DE62AC /* GithubInfoDetailCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				6326C2B325B0A43400DE62AC /* NotificationKey.swift */,
+				6326C2C525B136C100DE62AC /* ResourceManager.swift */,
+				6326C2CA25B1374100DE62AC /* Extension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -476,7 +485,10 @@
 				6326C28D25B01F5A00DE62AC /* Environment.swift in Sources */,
 				6326C2A425B0447000DE62AC /* GithubRootInfo.swift in Sources */,
 				6302773325B00D860052A339 /* AppDelegate.swift in Sources */,
+				6326C2C125B1356900DE62AC /* GithubInfoDetailCell.swift in Sources */,
+				6326C2C625B136C100DE62AC /* ResourceManager.swift in Sources */,
 				6326C29F25B02EF000DE62AC /* Error.swift in Sources */,
+				6326C2CB25B1374100DE62AC /* Extension.swift in Sources */,
 				6326C2BC25B12B6E00DE62AC /* SimpleRootInfo.swift in Sources */,
 				6326C2A925B069B200DE62AC /* DataCenter.swift in Sources */,
 				6302773525B00D860052A339 /* SceneDelegate.swift in Sources */,
