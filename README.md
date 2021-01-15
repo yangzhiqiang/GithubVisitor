@@ -5,3 +5,12 @@ This project implements an App in Swift. The App visits [API Endpoint](https://a
 
 
 
+## Installation
+
+1. download the source code
+2. On console, in root directory of project, run
+ 	
+ 	```
+ 	pod install
+	```
+3. Open `GithubVisitor.xcworkspace` and Build it
